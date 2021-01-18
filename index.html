@@ -1,0 +1,180 @@
+<!--
+name: Renārs Kokins
+student ID number: rk20055
+*/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Renars's portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <section class="landing-page" id="landing">
+        <nav class="navbar">
+            <ul class="navbar-ul" id="nav">
+                <li class="navbar-li"><a href="#landing" id="1"><p>RENĀRS KOKINS</p><div class="underglow"></div></a></li>
+                <li class="navbar-li"><a href="#about" id="2"><p>ABOUT ME</p><div class="underglow inactive"></div></a></li>
+                <li class="navbar-li"><a href="#projects" id="3"><p>PROJECTS</p><div class="underglow inactive"></div></a></li>
+                <li class="navbar-li"><a href="#contacts" id="4"><p>CONTACTS</p><div class="underglow inactive"></div></a></li>
+            </ul>
+        </nav>
+        <div class="landing-text">
+            <h1>
+                Renārs Kokins
+            </h1>
+            <p>
+                Software engineer
+            </p>
+        </div>
+    </section>
+    <section class="about-me" id="about">
+        <h1>ABOUT ME</h1>
+        <div class="about-content">
+            <div class="about-whole-text">
+                <p  class="about-text">
+                    I like to write software, because I like creating things, which work like I want them to! It is just satisfying to see automated things work on their own!
+                </p>
+                <br>
+                <p><strong>My skills:</strong></p>
+                <div class="about-skills">
+                    <div>Software Development
+                        <ul>
+                            <li>C++ and C# for Software Development(front-end and back-end)</li>
+                            <li>Python for automation, web testing and Artificial Intelligence</li>
+                            <li>HTML/CSS/JavaScript for website creation</li>
+                            <li>React.js for cross-platform apps</li>
+                        </ul>
+                    </div>
+                    <div>Hardware Development
+                        <ul>
+                            <li>Since childhood I have played around with radio electronics and tried to make some circuits</li>
+                            <li>Good soldering and PCB designing skills</li>
+                            <li>Have some experience creating new circuits from scratch</li>
+                            <li>I unerstand how electronics and technology works on the hardware scale</li>
+                        </ul>
+                    </div>
+                    <div>Graphic design
+                        <ul>
+                            <li>Good Adobe Photoshop, Illustrator, Lightroom skills</li>
+                            <li>I have some video editing experience in Adobe Premiere</li>
+                            <li>An eye for UI/UX designing</li>
+                            <li>I can manipulate photos and create graphics without any problems!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <img class="about-image" src="img/me_3.webp" alt="me :)"/>
+        </div>
+        <div class="guessMyAge">
+            <div class="top-guess">
+                <p>Try to guess how old I am!</p>
+                <input type="number" id="guess" name="guess" placeholder="Your guess...">
+            </div>
+            <button onclick="checkGuess()">I'm feeling lucky</button>
+            <div id="guess-part"></div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h1>PROJECTS</h1>
+        <div class="card">
+            <div class="card-img">
+                <img src="img/code_cropped.jpg" alt="Project-img">
+            </div>
+            <div class="card-text">
+                <h2><b>Neural Network Aimbot</b></h2>
+                <p><strong>AI based aimbot</strong> (mainly used for CS:GO) for testing purposes (isn't good enough for real usage yet). This aimbot uses darkflow port to windows <strong>(darknet)</strong> and coco_v4_tiny weights. Of course it isn't as good as a human in games, but it works as a concept preety well! It runs fast enough to detect in real-time, but lacks accuracy. That is because i just used it's default weights even though I should've trained it myself (maybe I will do it in future).</p>
+                <a href="https://github.com/RenarsKokins/darknet_aimbot">View project</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="img/code_cropped.jpg" alt="Project-img">
+            </div>
+            <div class="card-text">
+                <h2><b>Scoreboard OCR</b></h2>
+                <p><strong>Optical charecter recognition software</strong> for digitalizing scoreboards from camera feed. It is used to convert video feed from camera(pointed at the scoreboard in real life) into <i>XML, CSS or just text files</i> so that you can use it with streaming software and get instant score without need for a human to input values each time numbers change on the scoreboard.<br> I used C# to create this software, but I don't want to put out source code just jet, because I might monetize it. It is being tested in LiveTV streams during basketball games. Although it still makes some minor mistakes, I constantly update the recognition dataset to try to reduce those mistakes.</p>
+                <a href="https://www.youtube.com">View video</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="img/code_cropped.jpg" alt="Project-img">
+            </div>
+            <div class="card-text">
+                <h2><b>YOLO gym - Neural Newtork labeling software</b></h2>
+                <p><strong>Yolo gym</strong> is used to label images so that they can be used to train neural networks. I mainly made it because I wanted to label images for my aimbot project which needed custom weights. It is made using <strong>C#</strong> and is compatible with YOLO-type labeling system.</p>
+                <a href="https://github.com/RenarsKokins/YOLO-gym">View project</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="img/code_cropped.jpg" alt="Project-img">
+            </div>
+            <div class="card-text">
+                <h2><b>ToDo list</b></h2>
+                <p>A quick project I made for <strong>"Printful summer school".</strong> It uses <strong>PHP and MySQL</strong> for list creation and storage. It has a pretty sleek design and works well for it's intended purpose. Ofcourse it has minor bugs but it was made in one day.</p>
+                <a href="https://github.com/RenarsKokins/printful_uzd">View project</a>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <h1>CONTACT ME</h1>
+        <h2>Do you have any questions? If so, feel free to message me about anything!</h2>
+
+        <form name="emailForm" class="form" action="https://www.w3schools.com/action_page.php" onsubmit="return validateForm()" method="POST">
+            <div class="row">
+                <div>
+                    <label for="fname">First name</label>
+                </div>
+                <div>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="lname">Last name</label>
+                </div>
+                <div>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="email">Email address</label>
+                </div>
+                <div>
+                    <input type="text" id="email" name="email" placeholder="Your e-mail...">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="subject">Subject</label>
+                </div>
+                <div>
+                    <textarea id="subject" name="subject" placeholder="Write me something!"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+    <section class="footer">
+        <div class="footer-nav">
+            <a href="https://github.com/RenarsKokins">GitHub</a>
+            <a href="https://www.linkedin.com/in/ren%C4%81rs-kokins-35761a1b2/">LinkedIn</a>
+            <a href="https://www.instagram.com/renarskokins/">Instagram</a>
+            <a href="https://www.facebook.com/renars.kokins/">Facebook</a>
+        </div>
+        <p>Made by Renārs Kokins in 2021</p>
+        <p id="easter-egg">This is an easter egg!</p>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
