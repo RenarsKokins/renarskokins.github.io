@@ -46,8 +46,8 @@ function checkGuess(){
 
     let val = document.getElementById("guess").value;
 
-    if(val == "") message = "You should try harder...";
-    else if(val == 18) {message = "You are a wizard!"; correct = true;}
+    if(val == "") message = "You should try harder... at least enter a value";
+    else if(val == 19) {message = "You are a wizard!"; correct = true;}
     else if(val < 0) message = "That's just impossible...";
     else if(val >= 16 && val <= 25) message = "Preety close!";
     else if(val < 16) message = "I'M NOT A KID!!! :(";
