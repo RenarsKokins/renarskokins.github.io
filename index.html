@@ -126,7 +126,7 @@ student ID number: rk20055
         <h1>CONTACT ME</h1>
         <h2>Do you have any questions? If so, feel free to message me about anything!</h2>
 
-        <form name="emailForm" class="form" action="https://www.w3schools.com/action_page.php" onsubmit="return validateForm()" method="POST">
+        <form name="emailForm" class="form" action="https://formspree.io/f/xzbkolyp" onsubmit="return validateForm()" method="POST">
             <div class="row">
                 <div>
                     <label for="fname">First name</label>
@@ -148,15 +148,23 @@ student ID number: rk20055
                     <label for="email">Email address</label>
                 </div>
                 <div>
-                    <input type="text" id="email" name="email" placeholder="Your e-mail...">
+                    <input type="text" id="email" name="_replyto" placeholder="Your e-mail...">
                 </div>
             </div>
             <div class="row">
                 <div>
-                    <label for="subject">Subject</label>
+                    <label for="email">Subject</label>
                 </div>
                 <div>
-                    <textarea id="subject" name="subject" placeholder="Write me something!"></textarea>
+                    <input type="text" id="subject" name="subject" placeholder="Subject...">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="subject">Message</label>
+                </div>
+                <div>
+                    <textarea id="message" name="message" placeholder="Write me something!"></textarea>
                 </div>
             </div>
             <div class="row">
