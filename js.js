@@ -78,7 +78,7 @@ function updateGlow(index){
 }
 
 window.onscroll = function() {
-    if(fileName == "tutorial-csdd.html"){
+    if(fileName == "tutorial-csdd"){
         var rect1 = document.getElementById("start").getBoundingClientRect();
         var rect2 = document.getElementById("setup").getBoundingClientRect();
         var rect3 = document.getElementById("use").getBoundingClientRect();
@@ -95,7 +95,7 @@ window.onscroll = function() {
         }
         if(currentIndex!=lastIndex) updateGlow(currentIndex);
 
-    } else if(fileName == "index.html"){
+    } else if(fileName == "index"){
         var rect1 = document.getElementById("landing").getBoundingClientRect();
         var rect2 = document.getElementById("about").getBoundingClientRect();
         var rect3 = document.getElementById("projects").getBoundingClientRect();
