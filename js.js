@@ -1,5 +1,6 @@
 var currentIndex = 0;
 var lastIndex = currentIndex;
+var fileName = location.pathname.split("/").slice(-1);
 
 function validateForm() {
     if (document.forms["emailForm"]["fname"].value == "") {
@@ -68,7 +69,7 @@ function checkGuess(){
 }
 
 function updateGlow(index){
-    for(let i=1;i<5;i++){
+    for(let i=1;i<document.getElementById("nav").childElementCount+1;i++){
         document.getElementById(i).lastElementChild.classList.add("inactive");
     }
     document.getElementById(index).lastElementChild.classList.remove("inactive");
@@ -77,22 +78,68 @@ function updateGlow(index){
 }
 
 window.onscroll = function() {
-    var rect1 = document.getElementById("landing").getBoundingClientRect();
-    var rect2 = document.getElementById("about").getBoundingClientRect();
-    var rect3 = document.getElementById("projects").getBoundingClientRect();
-    var rect4 = document.getElementById("contacts").getBoundingClientRect();
+    if(fileName == "tutorial-csdd.html"){
+        var rect1 = document.getElementById("start").getBoundingClientRect();
+        var rect2 = document.getElementById("setup").getBoundingClientRect();
+        var rect3 = document.getElementById("use").getBoundingClientRect();
+        var rect4 = document.getElementById("contacts").getBoundingClientRect();
 
-    if(rect1.top > -rect1.height+100 && rect1.top < 100){
-        currentIndex = 1;
-    } else if(rect2.top > -rect2.height+100 && rect2.top < 100){
-        currentIndex = 2;
-    }else if(rect3.top > -rect3.height+100 && rect3.top < 100){
-        currentIndex = 3;
-    }else if(rect4.top > -rect4.height+100 && rect4.top < 100){
-        currentIndex = 4;
+        if(rect1.top > -rect1.height+100 && rect1.top < 100){
+            currentIndex = 1;
+        } else if(rect2.top > -rect2.height+100 && rect2.top < 100){
+            currentIndex = 2;
+        }else if(rect3.top > -rect3.height+100 && rect3.top < 100){
+            currentIndex = 3;
+        }else if(rect4.top > -rect4.height+100 && rect4.top < 100){
+            currentIndex = 4;
+        }
+        if(currentIndex!=lastIndex) updateGlow(currentIndex);
+
+    } else if(fileName == "index.html"){
+        var rect1 = document.getElementById("landing").getBoundingClientRect();
+        var rect2 = document.getElementById("about").getBoundingClientRect();
+        var rect3 = document.getElementById("projects").getBoundingClientRect();
+        var rect4 = document.getElementById("contacts").getBoundingClientRect();
+
+        if(rect1.top > -rect1.height+100 && rect1.top < 100){
+            currentIndex = 1;
+        } else if(rect2.top > -rect2.height+100 && rect2.top < 100){
+            currentIndex = 2;
+        }else if(rect3.top > -rect3.height+100 && rect3.top < 100){
+            currentIndex = 3;
+        }else if(rect4.top > -rect4.height+100 && rect4.top < 100){
+            currentIndex = 4;
+        }
+        if(currentIndex!=lastIndex) updateGlow(currentIndex);
     }
-    if(currentIndex!=lastIndex) updateGlow(currentIndex);
 };
+
+// function updateGlow(index){
+//     for(let i=1;i<5;i++){
+//         document.getElementById(i).lastElementChild.classList.add("inactive");
+//     }
+//     document.getElementById(index).lastElementChild.classList.remove("inactive");
+
+//     lastIndex = currentIndex;
+// }
+
+// window.onscroll = function() {
+//     var rect1 = document.getElementById("landing").getBoundingClientRect();
+//     var rect2 = document.getElementById("about").getBoundingClientRect();
+//     var rect3 = document.getElementById("projects").getBoundingClientRect();
+//     var rect4 = document.getElementById("contacts").getBoundingClientRect();
+
+//     if(rect1.top > -rect1.height+100 && rect1.top < 100){
+//         currentIndex = 1;
+//     } else if(rect2.top > -rect2.height+100 && rect2.top < 100){
+//         currentIndex = 2;
+//     }else if(rect3.top > -rect3.height+100 && rect3.top < 100){
+//         currentIndex = 3;
+//     }else if(rect4.top > -rect4.height+100 && rect4.top < 100){
+//         currentIndex = 4;
+//     }
+//     if(currentIndex!=lastIndex) updateGlow(currentIndex);
+// };
 
 $(document).ready(function() {
     $('#easter-egg').remove();
