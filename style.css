@@ -438,3 +438,20 @@ form input[type=submit]:hover, button:hover{
     padding-top: 56px;
     text-align: center;
 }
+
+@media screen and (max-width: 1180px) {
+    .setup-step{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .setup-text{
+        margin: auto;
+        text-align: justify;
+        width: 90vw;
+    }
+    .step-image{
+        margin: auto;
+        max-width: 90vw;
+        min-width: 90vw;
+    }
+}
