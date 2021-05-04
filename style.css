@@ -17,7 +17,7 @@ body{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     text-align: center;
     margin: 0;
@@ -385,6 +385,9 @@ form input[type=submit]:hover, button:hover{
     }
     button{
         width: 100%;
+    }
+    .navbar-li{
+        font-size: 80%;
     }
 }
 
